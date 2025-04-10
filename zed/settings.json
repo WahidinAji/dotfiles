@@ -1,0 +1,195 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "edit_predictions": {
+    "disabled_globs": ["*.sh"],
+    "mode": "eager"
+  },
+  "assistant": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-3-5-sonnet-latest"
+    },
+    "version": "2"
+  },
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
+  "project_panel": {
+    "dock": "right"
+  },
+  "file_types": {
+    "html": ["html"]
+  },
+  "ui_font_size": 14,
+  "buffer_font_size": 12,
+  "autosave": "on_focus_change",
+  "theme": "Ayu Light", //the theme you want to use is here https://github.com/epmoyer/Zed-Monokai-Theme/blob/main/monokai.json
+  "preferences": {
+    "includeInlayParameterNameHints": "all",
+    "includeInlayParameterNameHintsWhenArgumentMatchesName": true,
+    "includeInlayFunctionParameterTypeHints": true,
+    "includeInlayVariableTypeHints": true,
+    "includeInlayVariableTypeHintsWhenTypeMatchesName": true,
+    "includeInlayPropertyDeclarationTypeHints": true,
+    "includeInlayFunctionLikeReturnTypeHints": true,
+    "includeInlayEnumMemberValueHints": true
+  },
+  "buffer_line_height": "standard",
+  "languages": {
+    "JavaScript": {
+      "format_on_save": {
+        "external": {
+          "command": "prettier",
+          "arguments": ["--stdin-filepath", "{buffer_path}"]
+        }
+      },
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      }
+    },
+    "PHP": {
+      "language_servers": ["intelephense", "!phpactor"]
+    }
+  },
+  "lsp": {
+    "go": {
+      "hints": {
+        "assignVariableTypes": true,
+        "compositeLiteralFields": true,
+        "compositeLiteralTypes": true,
+        "constantValues": true,
+        "functionTypeParameters": true,
+        "parameterNames": true,
+        "rangeVariableTypes": true
+      }
+    },
+    "html": {
+      "completion": {
+        "attributeDefaultValue": true,
+        "attributeDetails": true,
+        "elementDetails": true,
+        "includeCompletionsForNonPrefixedTags": true,
+        "includeInlineStyleAttributes": true,
+        "includeOptionalAttributes": true,
+        "includeShorthandAttributes": true,
+        "includeValuesFromAttributesSchema": true,
+        "tagShorthand": true,
+        "tagValue": true,
+        "tabsize": 2,
+        "spaces": 2,
+        "space_size": 2
+      },
+      "format": {
+        "format_on_save": {
+          "external": {
+            "command": "prettier",
+            "arguments": ["--stdin-filepath", "{buffer_path}"]
+          }
+        }
+      },
+      "format_on_save": {
+        "external": {
+          "command": "prettier",
+          "arguments": ["--stdin-filepath", "{buffer_path}"]
+        }
+      },
+      "tab_size": 2,
+      "space_size": 2
+    },
+    "css": {
+      "completion": {
+        "attributeDefaultValue": true,
+        "attributeDetails": true,
+        "elementDetails": true,
+        "includeCompletionsForNonPrefixedTags": true,
+        "includeInlineStyleAttributes": true,
+        "includeOptionalAttributes": true,
+        "includeShorthandAttributes": true,
+        "includeValuesFromAttributesSchema": true,
+        "tagShorthand": true,
+        "tagValue": true
+      }
+    },
+    "json": {
+      "format_on_save": {
+        "external": {
+          "command": "prettier",
+          "arguments": ["--stdin-filepath", "{buffer_path}"]
+        }
+      }
+    },
+    "python": {
+      "completion": {
+        "includeSnippets": true,
+        "includeParams": true,
+        "includeTypeHints": true
+      }
+    },
+    "rust": {
+      "completion": {
+        "includeSnippets": true,
+        "includeParams": true,
+        "includeTypeHints": true
+      }
+    },
+    "typescript": {
+      "completion": {
+        "includeSnippets": true,
+        "includeParams": true,
+        "includeTypeHints": true
+      }
+    },
+    "php": {
+      "completion": {
+        "includeSnippets": true,
+        "includeParams": true,
+        "includeTypeHints": true
+      },
+      "linting": {
+        "enabled": true,
+        "command": "php -l",
+        "arguments": ["{buffer_path}"]
+      }
+    }
+  },
+  "git_status": true,
+  "git": {
+    "git_gutter": "tracked_files",
+    "gutter_debounce": 1000,
+    "inline_blame": {
+      "show_commit_summary": true,
+      "enabled": true,
+      "format": "{author}, {date}",
+      "show_email": true
+    },
+    "status_bar_item_priority": 100,
+    "inline_diff": true
+  },
+  "inlay_hints": {
+    "enabled": true,
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    "show_other_hints": true
+  },
+  "symbols.folder.exclusions": [
+    ".git",
+    ".github",
+    ".vscode",
+    "node_modules",
+    "vendor"
+  ],
+  "symbols.file.exclusions": [
+    ".git",
+    ".github",
+    ".vscode",
+    "node_modules",
+    "vendor"
+  ]
+}
